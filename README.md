@@ -42,7 +42,7 @@ else:
 
 * We also provide simpler executable Python files -- [SNARE_probing.py](SNARE_probing.py). Here's an example:
 ```bash
-python --device cuda:1 --dataset Attribute_Ownership --model_name flava --seed 1
+python --device cuda:1 --dataset Attribute_Ownership --model_name flava
 ```
 
 * The data format for each of our datasets is as follows, and you can write code on your own to utilize the dataset.
