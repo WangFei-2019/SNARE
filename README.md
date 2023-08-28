@@ -8,10 +8,10 @@ SNARE contains four tasks: 1) semantic structure, 2) negation logic, 3) attribut
 ## Abstract
 The multimedia community has shown a significant interest in perceiving and representing the physical world with multimodal pretrained neural network models, and among them, the visual-language pertaining (VLP) is, currently, the most captivating topic. The common practice for pretraining the visual-language backbone is supervising the training process with paired image-text data. However, there have been few endeavors dedicated to the exploration of 1) whether essential linguistic knowledge (e.g., semantics and syntax) can be extracted during VLP, and 2) how such linguistic knowledge impact or enhance the multimodal alignment. In response, here we aim to elucidate the impact of comprehensive linguistic knowledge, including semantic expression and syntactic structure, on multimodal alignment. Specifically, we design and release the SNARE, the first large-scale multimodal alignment probing benchmark, to detect the vital linguistic components, e.g., lexical, semantic, and syntax knowledge, containing four tasks: Semantic structure, Negation logic, Attribute ownership, and Relationship composition. Based on our proposed probing benchmark, our holistic analyses of five advanced VLP models (i.e., BLIP, CLIP, Flava, X-VLM, and BLIP2) illustrate that the VLP model: <i>i)</i> shows insensitivity towards complex syntax structures and relies on content words for sentence comprehension; <i>ii)</i> demonstrates limited comprehension of combinations between sentences and negations; <i>iii)</i> faces challenges in determining the presence of actions or spatial relationships within visual information and struggles with verifying the correctness of triple combinations. Given the above findings, we suggest that, to improve the multimodal alignment, 1) using the large generative language model as the language backbone in VLP to understand complex sentences; 2) establishing high-quality datasets by highlighting the content words and using simple syntax (e.g., short-distance semantic composition) to improve multimodal alignment; and 3) incorporating more fine-grained visual knowledge (e.g., spatial relationships) into pretraining objectives.
 
-# Using
+## Usage
 We provide the code for evaluating the five models discussed in the paper on our benchmark. 
 
-* The usage instructions of python are as follows.
+* The usage instructions of Python are as follows.
 ```python
 from torch.utils.data import DataLoader
 from snare.models import get_model
@@ -50,10 +50,10 @@ python --device cuda:1 --dataset Attribute_Ownership --model_name flava
 item = {"image_options": [image], "caption_options": [Option_sentence_1, Option_sentence_2, ...]}
 ```
 
-# Data Processing
+## Data Processing
  We performed secondary innovation on the original dataset to generate new data. If you wish to explore additional diverse options, you can refer to the code in `sanre/datasets_zoo/data_des.py`.
 
-# Models 
+## Models 
 We evaluate with five models and you can get the model weights from the following. Please see `sanre/models/` folder for more details. 
 
 Model Name | Model File in this Repo | Repo |
