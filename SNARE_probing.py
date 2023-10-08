@@ -19,8 +19,8 @@ def config():
 	parser.add_argument("--model_name", default="llava", choices=["blip2", "llava", "flava", "x-vlm", "clip", "blip", "vilt"],
 						type=str)
 	parser.add_argument("--dataset", default="COCO_Semantic_Structure", type=str,
-						choices=["VG_Attribute_Ownership", "VG_Subordination_Relationship",
-								 "VG_Spatial_Relationship", "VG_Sentence_Logic",
+						choices=["Attribute_Ownership", "Subordination_Relationship",
+								 "Spatial_Relationship", "Sentence_Logic",
 								 "COCO_Semantic_Structure", "Flickr30k_Semantic_Structure",
 								 "VG_Relation", "VG_Attribution", "COCO_Order", "Flickr30k_Order"])
 
