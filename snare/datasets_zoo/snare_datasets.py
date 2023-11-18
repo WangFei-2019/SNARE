@@ -447,7 +447,7 @@ class COCO_Semantic_Structure(Dataset):
 			for i, caption in enumerate(ann['caption']):
 				test_case = {}
 				test_case["image"] = ann["image"]
-				test_case["caption_options"] = []  # [pre_caption(caption, max_words)]
+				test_case["caption_options"] = [pre_caption(caption, max_words)]
 
 				for perturb_fn in perturb_functions:
 					test_case["caption_options"].append(pre_caption(perturb_fn(caption), max_words))
