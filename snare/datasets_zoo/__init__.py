@@ -1,6 +1,13 @@
-COCO_ROOT = "/root/wf/dataset/data/coco"
-FLICKR_ROOT = "/root/wf/dataset/data/f30k"
-CASSP_ROOT = "/root/wf/dataset/data/prerelease_bow"
+import os
+
+current_file_path = os.path.abspath(__file__)
+current_directory = os.path.dirname(current_file_path)
+parent_directory = os.path.dirname(current_directory)
+grandparent_directory = os.path.dirname(parent_directory)
+
+COCO_ROOT = f"{grandparent_directory}/dataset/data/coco"
+FLICKR_ROOT = f"{grandparent_directory}/dataset/data/f30k"
+CASSP_ROOT = f"{grandparent_directory}/dataset/data/prerelease_bow"
 
 
 def get_dataset(dataset_name, image_preprocess=None, text_perturb_fn=None, image_perturb_fn=None, download=False, *args,
