@@ -50,6 +50,7 @@ python SNARE_probing.py --device cuda:1 --dataset Attribute_Ownership --model_na
 item = {"image_options": [image], "caption_options": [Option_sentence_1, Option_sentence_2, ...]}
 ```
 
+
 ## Data Processing
  We performed secondary innovation on the original dataset to generate new data. If you wish to explore additional diverse options, you can refer to the code in `sanre/datasets_zoo/data_des.py`.
 
