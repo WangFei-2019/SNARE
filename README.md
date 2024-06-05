@@ -62,7 +62,7 @@ BLIP | [BLIP implementation](.snare\models\blip_load.py) | https://github.com/sa
 CLIP | [CLIP implementation](.snare\models\clip_load.py) | https://github.com/openai/CLIP |
 Flava | [Flava implementation](.snare\models\flava_load.py) | https://huggingface.co/facebook/flava-full |
 XVLM | [XVLM implementation](.snare\models\xvlm_load.py) | https://github.com/zengyan-97/X-VLM |
-BLIP2 | [BLIP2_implementation](.snare\models\blip2_load.py)| https://github.com/salesforce/LAVIS/tree/main/projects/blip2|
+BLIP2 | [BLIP2_implementation](.snare\models\blip2_load.py)| https://huggingface.co/Salesforce/blip2-flan-t5-xl|
 
 
 ## Citation
