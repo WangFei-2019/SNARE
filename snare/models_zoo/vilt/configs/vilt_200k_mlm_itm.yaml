@@ -1,0 +1,51 @@
+
+drop_rate: 0.1
+hidden_size: 768
+num_heads: 12
+num_layers: 12
+max_text_len: 40
+mlp_ratio: 4
+vocab_size: 30522
+
+batch_size: 4096
+capmlm_prob: 0.8
+capmlm_prob_no: 0.0
+data_root: ../arrows/
+datasets:
+- coco
+- vg
+- sbu
+- gcc
+decay_power: 1
+draw_false_image: 1
+draw_false_text: 0
+
+end_lr: 0
+fast_dev_run: false
+
+image_only: false
+image_size: 384
+load_path: ./weights/vilt_200k_mlm_itm.ckpt
+
+lr_mult: 1
+max_epoch: 10
+max_image_len: 200
+max_steps: 2000
+
+optim_type: adamw
+patch_size: 32
+per_gpu_batchsize: 48
+precision: 16
+resume_from: null
+
+tokenizer: bert-base-uncased
+
+use_content: true
+test_transform_keys: ["pixelbert"]
+
+vit: vit_base_patch32_384
+
+vqav2_label_size: 3129
+warmup_steps: 2500
+weight_decay: 0.01
+whole_word_masking: true
